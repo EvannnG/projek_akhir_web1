@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <title>Hubungi Kami – Form Pendaftaran Mahasiswa</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#f5f5f5] text-black">
+  <!-- HEADER -->
+  <header class="bg-white shadow-sm sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-4 lg:px-6 h-16 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <div class="h-8 flex items-center">
+          <img src="images/logoo.svg" alt="The Coca-Cola Company" class="h-6 md:h-7">
+        </div>
+      </div>
+  <nav class="hidden md:flex items-center space-x-8 text-[15px] font-medium">
+    <a href="index.html" class="flex items-center hover:text-gray-500 transition">
+        Home
+    </a>
+    <a href="posts.html" class="flex items-center hover:text-gray-500 transition">
+        Posts
+    </a>
+
+    <a href="biodata.html" class="flex items-center hover:text-gray-500 transition">
+        Biodata
+    </a>
+
+    <a href="freepage.html" class="flex items-center hover:text-gray-500 transition">
+        Free Page
+    </a>
+  </nav>
+
+      <a href="freepage.html"
+         class="inline-flex items-center justify-center px-6 py-2 rounded-full border border-black text-sm font-semibold bg-white hover:bg-black hover:text-white transition">
+        Daftar
+      </a>
+      
+      
+    </div>
+  </header>
+
+  <main class="min-h-screen">
+    <section class="max-w-3xl mx-auto px-4 lg:px-6 py-10 md:py-14">
+      <h1 class="text-3xl md:text-4xl font-extrabold mb-2 text-center">
+        Form Pendaftaran Mahasiswa
+      </h1>
+      <p class="text-center text-sm text-gray-600 mb-8">
+        Silakan isi seluruh data dengan benar. Semua field bersifat wajib.
+      </p>
+
+      <div id="alert" class="hidden mb-4 p-3 text-sm rounded-md"></div>
+
+      <form id="studentForm" class="bg-white rounded-[28px] shadow-sm p-6 md:p-8 space-y-4">
+        <!-- Nama Lengkap -->
+        <div>
+          <label class="block text-sm font-semibold mb-1" for="fullname">Nama Lengkap</label>
+          <input type="text" id="fullname" name="fullname"
+                 class="w-full border border-gray-300 rounded-xl px-3 py-2 text-sm focus:ring-2 focus:ring-red-500 focus:outline-none transition"
+                 placeholder="Masukkan nama lengkap">
+          <p class="mt-1 text-xs text-red-600 hidden" id="err-fullname"></p>
+        </div>
+
+        <!-- NIM -->
+        <div>
+          <label class="block text-sm font-semibold mb-1" for="nim">ID Mahasiswa (NIM)</label>
+          <input type="text" id="nim" name="nim"
+                 class="w-full border border-gray-300 rounded-xl px-3 py-2 text-sm focus:ring-2 focus:ring-red-500 focus:outline-none transition"
+                 placeholder="Masukkan NIM">
+          <p class="mt-1 text-xs text-red-600 hidden" id="err-nim"></p>
+        </div>
+
+        <!-- Email -->
+        <div>
+          <label class="block text-sm font-semibold mb-1" for="email">Alamat Email</label>
+          <input type="email" id="email" name="email"
+                 class="w-full border border-gray-300 rounded-xl px-3 py-2 text-sm focus:ring-2 focus:ring-red-500 focus:outline-none transition"
+                 placeholder="nama@example.com">
+          <p class="mt-1 text-xs text-red-600 hidden" id="err-email"></p>
+        </div>
+
+        <!-- Fakultas/Jurusan -->
+        <div>
+          <label class="block text-sm font-semibold mb-1" for="faculty">Fakultas / Jurusan</label>
+          <select id="faculty" name="faculty"
+                  class="w-full border border-gray-300 rounded-xl px-3 py-2 text-sm bg-white focus:ring-2 focus:ring-red-500 focus:outline-none transition">
+            <option value="">-- Pilih Fakultas/Jurusan --</option>
+            <option value="FTI-TI">FTI – Teknik Informatika</option>
+            <option value="FTI-SI">FTI – Sistem Informasi</option>
+            <option value="FE">Fakultas Ekonomi</option>
+            <option value="FKIP">Fakultas Keguruan</option>
+          </select>
+          <p class="mt-1 text-xs text-red-600 hidden" id="err-faculty"></p>
+        </div>
+
+        <!-- Tanggal Lahir -->
+        <div>
+          <label class="block text-sm font-semibold mb-1" for="birthdate">Tanggal Lahir</label>
+          <input type="date" id="birthdate" name="birthdate"
+                 class="w-full border border-gray-300 rounded-xl px-3 py-2 text-sm focus:ring-2 focus:ring-red-500 focus:outline-none transition">
+          <p class="mt-1 text-xs text-red-600 hidden" id="err-birthdate"></p>
+        </div>
+
+        <!-- Jenis Kelamin -->
+        <div>
+          <span class="block text-sm font-semibold mb-1">Jenis Kelamin</span>
+          <div class="flex items-center space-x-6 text-sm">
+            <label class="inline-flex items-center">
+              <input type="radio" name="gender" value="Pria"
+                     class="mr-2 focus:ring-2 focus:ring-red-500">
+              Pria
+            </label>
+            <label class="inline-flex items-center">
+              <input type="radio" name="gender" value="Wanita"
+                     class="mr-2 focus:ring-2 focus:ring-red-500">
+              Wanita
+            </label>
+          </div>
+          <p class="mt-1 text-xs text-red-600 hidden" id="err-gender"></p>
+        </div>
+
+        <!-- Alamat -->
+        <div>
+          <label class="block text-sm font-semibold mb-1" for="address">Alamat</label>
+          <textarea id="address" name="address" rows="3"
+                    class="w-full border border-gray-300 rounded-xl px-3 py-2 text-sm focus:ring-2 focus:ring-red-500 focus:outline-none transition"
+                    placeholder="Masukkan alamat lengkap"></textarea>
+          <p class="mt-1 text-xs text-red-600 hidden" id="err-address"></p>
+        </div>
+
+        <!-- Nomor Telepon -->
+        <div>
+          <label class="block text-sm font-semibold mb-1" for="phone">Nomor Telepon</label>
+          <input type="text" id="phone" name="phone"
+                 class="w-full border border-gray-300 rounded-xl px-3 py-2 text-sm focus:ring-2 focus:ring-red-500 focus:outline-none transition"
+                 placeholder="Contoh: 081234567890">
+          <p class="mt-1 text-xs text-red-600 hidden" id="err-phone"></p>
+        </div>
+
+        <div class="pt-4 flex justify-end">
+          <button type="submit"
+                  class="px-6 py-2 rounded-full bg-red-600 text-white text-sm font-semibold hover:bg-red-700 transition shadow">
+            Kirim Pendaftaran
+          </button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="bg-black text-gray-200 pt-6 pb-4 mt-10">
+    <div class="max-w-6xl mx-auto px-4 lg:px-6 text-xs flex flex-col md:flex-row items-center justify-between gap-2">
+      <p>© 2025 The Coca-Cola Company. All rights reserved.</p>
+      <p>Form ini dibuat untuk keperluan tugas kuliah.</p>
+    </div>
+  </footer>
+
+  <script>
+    const form = document.getElementById('studentForm');
+    const alertBox = document.getElementById('alert');
+
+    function showError(id, message) {
+      const p = document.getElementById('err-' + id);
+      p.textContent = message;
+      p.classList.remove('hidden');
+    }
+
+    function clearErrors() {
+      document.querySelectorAll('[id^="err-"]').forEach((el) => {
+        el.textContent = '';
+        el.classList.add('hidden');
+      });
+      alertBox.classList.add('hidden');
+    }
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      clearErrors();
+
+      let isValid = true;
+
+      const fullname = form.fullname.value.trim();
+      const nim = form.nim.value.trim();
+      const email = form.email.value.trim();
+      const faculty = form.faculty.value;
+      const birthdate = form.birthdate.value;
+      const gender = form.gender.value;
+      const address = form.address.value.trim();
+      const phone = form.phone.value.trim();
+
+      if (!fullname) {
+        showError('fullname', 'Nama lengkap wajib diisi.');
+        isValid = false;
+      }
+      if (!nim) {
+        showError('nim', 'NIM wajib diisi.');
+        isValid = false;
+      }
+
+      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!email) {
+        showError('email', 'Email wajib diisi.');
+        isValid = false;
+      } else if (!emailPattern.test(email)) {
+        showError('email', 'Format email tidak valid.');
+        isValid = false;
+      }
+
+      if (!faculty) {
+        showError('faculty', 'Silakan pilih fakultas/jurusan.');
+        isValid = false;
+      }
+
+      if (!birthdate) {
+        showError('birthdate', 'Tanggal lahir wajib diisi.');
+        isValid = false;
+      }
+
+      if (!gender) {
+        showError('gender', 'Silakan pilih jenis kelamin.');
+        isValid = false;
+      }
+
+      if (!address) {
+        showError('address', 'Alamat wajib diisi.');
+        isValid = false;
+      }
+
+      if (!phone) {
+        showError('phone', 'Nomor telepon wajib diisi.');
+        isValid = false;
+      } else if (!/^[0-9]+$/.test(phone)) {
+        showError('phone', 'Nomor telepon hanya boleh berisi angka.');
+        isValid = false;
+      } else if (phone.length < 10) {
+        showError('phone', 'Nomor telepon minimal 10 digit.');
+        isValid = false;
+      }
+
+      if (!isValid) {
+        alertBox.className =
+          'mb-4 p-3 text-sm rounded-md bg-red-100 text-red-800';
+        alertBox.textContent =
+          'Form belum lengkap atau terdapat kesalahan. Silakan periksa kembali.';
+        alertBox.classList.remove('hidden');
+        return;
+      }
+
+      // Jika valid
+      alertBox.className =
+        'mb-4 p-3 text-sm rounded-md bg-green-100 text-green-800';
+      alertBox.textContent = 'Pendaftaran berhasil dikirim. Terima kasih!';
+      alertBox.classList.remove('hidden');
+
+      form.reset();
+    });
+  </script>
+</body>
+</html>

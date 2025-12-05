@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <title>Postingan – Fetch API</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#f5f5f5] text-black">
+  <!-- HEADER -->
+  <header class="bg-white shadow-sm sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-4 lg:px-6 h-16 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <div class="h-8 flex items-center">
+          <img src="images/logoo.svg" alt="The Coca-Cola Company" class="h-6 md:h-7">
+        </div>
+      </div>
+      <nav class="hidden md:flex items-center space-x-8 text-[15px] font-medium">
+    <a href="index.html" class="flex items-center hover:text-gray-500 transition">
+        Home
+    </a>
+
+    <a href="contact_us.html" class="flex items-center hover:text-gray-500 transition">
+        Contact
+    </a>
+
+    <a href="posts.html" class="flex items-center hover:text-gray-500 transition">
+        Posts
+    </a>
+    
+    <a href="biodata.html" class="flex items-center hover:text-gray-500 transition">
+        Biodata
+    </a>
+
+    <a href="freepage.html" class="flex items-center hover:text-gray-500 transition">
+        Free Page
+    </a>
+</nav>
+
+      <a href="freepage.html"
+         class="inline-flex items-center justify-center px-6 py-2 rounded-full border border-black text-sm font-semibold bg-white hover:bg-black hover:text-white transition">
+        Daftar
+      </a>
+    </div>
+  </header>
+
+  <main class="min-h-screen">
+    <section class="max-w-4xl mx-auto px-4 lg:px-6 py-10 md:py-14">
+      <h1 class="text-3xl md:text-4xl font-extrabold mb-2 text-center">
+        Postingan dari JSONPlaceholder
+      </h1>
+      <p class="text-center text-sm text-gray-600 mb-8">
+        Data diambil menggunakan <span class="font-mono text-xs">Fetch API</span> dari
+        <span class="font-mono text-xs">https://jsonplaceholder.typicode.com/posts/31</span>
+        (dua digit terakhir NIM: <strong>31</strong>).
+      </p>
+
+      <div id="postCard"
+           class="bg-white rounded-[28px] shadow-sm p-6 md:p-8 text-sm md:text-base">
+        <p id="status" class="text-gray-600 mb-4">Mengambil data...</p>
+
+        <div id="postContent" class="hidden space-y-4">
+          <div class="flex justify-between text-sm">
+            <span class="font-semibold">ID Postingan:</span>
+            <span id="postId"></span>
+          </div>
+          <div>
+            <h2 class="font-semibold mb-1">Judul</h2>
+            <p id="postTitle" class="leading-relaxed"></p>
+          </div>
+          <div>
+            <h2 class="font-semibold mb-1">Body</h2>
+            <p id="postBody" class="leading-relaxed whitespace-pre-line"></p>
+          </div>
+        </div>
+      </div>
+
+      <p class="mt-4 text-xs text-gray-500">
+        Catatan: jika API gagal diakses, pesan error akan muncul di bagian atas kartu.
+      </p>
+    </section>
+  </main>
+
+  <footer class="bg-black text-gray-200 pt-6 pb-4 mt-10">
+    <div class="max-w-6xl mx-auto px-4 lg:px-6 text-xs flex flex-col md:flex-row items-center justify-between gap-2">
+      <p>© 2025 The Coca-Cola Company. All rights reserved.</p>
+      <p>Halaman ini mendemonstrasikan penggunaan Fetch API.</p>
+    </div>
+  </footer>
+
+  <script>
+    const NIM_LAST_TWO = "31";
+    const url = `https://jsonplaceholder.typicode.com/posts/${NIM_LAST_TWO}`;
+
+    const statusEl = document.getElementById('status');
+    const postContentEl = document.getElementById('postContent');
+    const postIdEl = document.getElementById('postId');
+    const postTitleEl = document.getElementById('postTitle');
+    const postBodyEl = document.getElementById('postBody');
+
+    fetch(url)
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error('Gagal mengambil data (status ' + response.status + ')');
+        }
+        return response.json();
+      })
+      .then((data) => {
+        statusEl.classList.add('hidden');
+        postContentEl.classList.remove('hidden');
+
+        postIdEl.textContent = data.id;
+        postTitleEl.textContent = data.title;
+        postBodyEl.textContent = data.body;
+      })
+      .catch((error) => {
+        statusEl.textContent = 'Terjadi kesalahan: ' + error.message;
+        statusEl.classList.remove('hidden');
+      });
+  </script>
+</body>
+</html>

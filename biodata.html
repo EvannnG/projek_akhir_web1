@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Biodata – Evan Yehuda Prananta Ginting</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#f5f5f5] text-black">
+  <!-- HEADER (sama seperti index) -->
+  <header class="bg-white shadow-sm sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-4 lg:px-6 h-16 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <div class="h-8 flex items-center">
+          <img src="images/logoo.svg" alt="The Coca-Cola Company" class="h-6 md:h-7">
+        </div>
+      </div>
+      <nav class="hidden md:flex items-center space-x-8 text-[15px] font-medium">
+    <a href="index.html" class="flex items-center hover:text-gray-500 transition">
+        Home
+    </a>
+
+    <a href="contact_us.html" class="flex items-center hover:text-gray-500 transition">
+        Contact
+    </a>
+
+    <a href="posts.html" class="flex items-center hover:text-gray-500 transition">
+        Posts
+    </a>
+
+    <a href="freepage.html" class="flex items-center hover:text-gray-500 transition">
+        Free Page
+    </a>
+</nav>
+
+      <a href="freepage.html"
+         class="inline-flex items-center justify-center px-6 py-2 rounded-full border border-black text-sm font-semibold bg-white hover:bg-black hover:text-white transition">
+        Daftar
+      </a>
+    </div>
+  </header>
+
+  <main class="min-h-screen">
+    <section class="max-w-4xl mx-auto px-4 lg:px-6 py-10 md:py-14">
+      <h1 class="text-3xl md:text-4xl font-extrabold mb-8 text-center">
+        Biodata Mahasiswa
+      </h1>
+
+      <!-- KARTU BIODATA -->
+      <div class="bg-white rounded-[28px] shadow-sm p-6 md:p-8 mb-8">
+        <div class="flex flex-col md:flex-row items-center gap-6 md:gap-8">
+          <!-- FOTO -->
+          <div class="flex-shrink-0">
+            <!-- ganti dengan foto asli kamu -->
+            <div class="w-36 h-36 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-red-500 bg-gray-200">
+              <img src="images/foto-evan.jpg" alt="Foto Evan Yehuda Prananta Ginting"
+                   class="w-full h-full object-cover">
+            </div>
+          </div>
+
+          <!-- DATA -->
+          <div class="w-full">
+            <div class="grid sm:grid-cols-2 gap-x-8 gap-y-2 text-sm md:text-[15px]">
+              <p><span class="font-semibold">Nama:</span> Evan Yehuda Prananta Ginting</p>
+              <p><span class="font-semibold">NIM:</span> 2481031</p>
+              <p><span class="font-semibold">Fakultas:</span> FTI – Teknik Informatika</p>
+              <p><span class="font-semibold">Universitas:</span> Universitas Advent Indonesia</p>
+              <p><span class="font-semibold">Hobi:</span> olahraga, nonton, membaca</p>
+              <p><span class="font-semibold">Keterampilan:</span> lari</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TESTIMONIAL / REFLEKSI -->
+      <section class="bg-white rounded-[28px] shadow-sm p-6 md:p-8 space-y-4">
+        <h2 class="text-2xl font-bold mb-2">Testimonial &amp; Refleksi Kelas</h2>
+        <p class="text-sm md:text-base text-gray-700">
+          Selama mengikuti mata kuliah Pengembangan Web ini, saya belajar bahwa membangun
+          sebuah website bukan hanya soal membuat tampilan yang menarik, tetapi juga
+          bagaimana mengatur struktur, menjaga konsistensi desain, dan memastikan
+          pengalaman pengguna terasa nyaman di berbagai perangkat.
+        </p>
+        <p class="text-sm md:text-base text-gray-700">
+          Bagian yang paling saya nikmati adalah ketika mulai menggunakan Tailwind CSS.
+          Di awal saya sedikit bingung dengan banyaknya utility class, tetapi setelah
+          mencoba lebih jauh, saya merasa proses styling jadi jauh lebih cepat dan
+          rapi. Tantangan terbesar bagi saya adalah mengatur layout responsif agar
+          tetap mirip dengan desain referensi, terutama saat menyesuaikan tampilan
+          untuk layar kecil dan besar.
+        </p>
+        <p class="text-sm md:text-base text-gray-700">
+          Proyek akhir ini membantu saya melihat bahwa skill front-end bukan hanya
+          tugas kuliah, tetapi bisa menjadi bagian dari portofolio yang menunjukkan
+          kemampuan saya sebagai calon pengembang web. Saya jadi lebih percaya diri
+          untuk mengerjakan proyek website lainnya ke depannya.
+        </p>
+      </section>
+    </section>
+  </main>
+
+  <!-- FOOTER sama seperti index, bisa dipersingkat -->
+  <footer class="bg-black text-gray-200 pt-10 pb-6 mt-10">
+    <div class="max-w-6xl mx-auto px-4 lg:px-6">
+      <div class="flex flex-col md:flex-row items-start md:items-center justify-between mb-6">
+        <div class="flex items-center">
+          <img src="images/logo.svg" alt="The Coca-Cola Company" class="h-7">
+        </div>
+        <button
+          class="mt-4 md:mt-0 inline-flex items-center gap-2 px-5 py-2 rounded-full border border-gray-400 text-sm hover:bg-white hover:text-black transition">
+          <span class="inline-block w-4 h-4 rounded-full border border-gray-400"></span>
+          <span>Indonesia</span>
+        </button>
+      </div>
+      <div class="border-t border-gray-700 mt-6 pt-4 text-xs text-gray-400 text-right">
+        © 2025 The Coca-Cola Company. All rights reserved.
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

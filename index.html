@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Coca-Cola Company – Indonesia</title>
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#f5f5f5] text-black">
+  <!-- HEADER -->
+  <header class="bg-white shadow-sm sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-4 lg:px-6 h-16 flex items-center justify-between">
+      <!-- Logo + text -->
+      <div class="flex items-center space-x-3">
+        <div class="h-8 flex items-center">
+          <!-- pakai logo yang kamu punya -->
+          <img src="images/logoo.svg" alt="The Coca-Cola Company" class="h-6 md:h-7">
+        </div>
+      </div>
+
+      <!-- Nav utama – teks sama seperti di foto -->
+  <nav class="hidden md:flex items-center space-x-8 text-[15px] font-medium">
+    <a href="contact_us.html" class="flex items-center hover:text-gray-500 transition">
+        Contact
+    </a>
+
+    <a href="posts.html" class="flex items-center hover:text-gray-500 transition">
+        Posts
+    </a>
+
+    <a href="biodata.html" class="flex items-center hover:text-gray-500 transition">
+        Biodata
+    </a>
+
+    <a href="freepage.html" class="flex items-center hover:text-gray-500 transition">
+        Free Page
+    </a>
+</nav>
+
+
+      <!-- Tombol Daftar (bisa diarahkan ke freepage.html) -->
+      <a href="freepage.html"
+         class="inline-flex items-center justify-center px-6 py-2 rounded-full border border-black text-sm font-semibold bg-white hover:bg-black hover:text-white transition">
+        Daftar
+      </a>
+    </div>
+  </header>
+
+  <main class="min-h-screen">
+    <!-- HERO / BANNER -->
+    <section class="py-8 md:py-10">
+      <div class="max-w-6xl mx-auto px-4 lg:px-6">
+        <div class="relative bg-white rounded-[32px] overflow-hidden">
+          <!-- background hero: gambar penuh -->
+          <img src="images/banner.webp" alt="Share a Coke"
+               class="w-full h-[420px] md:h-[460px] object-cover">
+
+          <!-- overlay text kiri seperti di foto -->
+          <div class="absolute inset-0 flex">
+            <!-- sisi kiri untuk teks, sisi kanan transparan -->
+            <div class="w-full md:w-1/2 flex items-center">
+              <div class="px-8 md:px-12 lg:px-16">
+                <p class="text-white text-sm font-semibold mb-2">
+                  Nongkrong seru!
+                </p>
+                <h1 class="text-3xl md:text-4xl font-extrabold text-white leading-tight mb-3">
+                  Yuk cari namamu &amp; personamu!
+                </h1>
+                <p class="text-white text-sm md:text-base mb-6">
+                  Atau buat COCA-COLA versi kamu dan bestiemu
+                </p>
+
+                <button
+                  class="inline-flex items-center justify-center px-8 py-2 rounded-full bg-white text-[15px] font-bold hover:bg-gray-200 transition shadow">
+                  Buat Sekarang!
+                </button>
+
+                <!-- link eksternal (syarat tugas), dibuat kecil agar tetap mirip -->
+                <div class="mt-5 space-x-4 text-[11px] md:text-xs text-white/90">
+                  <a href="https://fti.unai.edu" target="_blank"
+                     class="underline hover:text-white">FTI UNAI</a>
+                  <span class="opacity-70">|</span>
+                  <a href="https://unai.edu" target="_blank"
+                     class="underline hover:text-white">Situs UNAI</a>
+                </div>
+              </div>
+            </div>
+            <!-- sisi kanan dibiarkan kosong agar gambar terlihat -->
+            <div class="hidden md:block md:w-1/2"></div>
+          </div>
+        </div>
+
+        <!-- dot slider di bawah banner -->
+        <div class="flex justify-center mt-4 space-x-2">
+          <span class="w-2 h-2 rounded-full bg-gray-400"></span>
+          <span class="w-2 h-2 rounded-full bg-gray-900"></span>
+          <span class="w-2 h-2 rounded-full bg-gray-400"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- PENGALAMAN -->
+    <section class="py-10 md:py-12">
+      <div class="max-w-6xl mx-auto px-4 lg:px-6">
+        <h2 class="text-center text-2xl md:text-3xl font-extrabold mb-6">
+          Pengalaman
+        </h2>
+
+        <div class="grid md:grid-cols-2 gap-6">
+          <!-- card 1 -->
+          <article
+            class="bg-white rounded-[28px] overflow-hidden shadow-sm hover:shadow-md transition">
+            <img src="images/Gambar1.webp" alt="Pantai"
+                 class="w-full h-64 object-cover">
+            <div class="px-6 py-6">
+              <h3 class="text-lg font-bold mb-2">
+                Menciptakan dunia tanpa sampah
+              </h3>
+              <p class="text-sm text-gray-700 mb-4 leading-relaxed">
+                Kami bertujuan untuk mengumpulkan dan mendaur ulang kemasan
+                untuk setiap produk yang kami jual pada tahun 2030.
+              </p>
+              <a href="#" class="text-sm font-semibold hover:underline">
+                Informasi lebih lanjut →
+              </a>
+            </div>
+          </article>
+
+          <!-- card 2 -->
+          <article
+            class="bg-white rounded-[28px] overflow-hidden shadow-sm hover:shadow-md transition">
+            <img src="images/Gambar2.webp" alt="Komunitas lokal"
+                 class="w-full h-64 object-cover">
+            <div class="px-6 py-6">
+              <h3 class="text-lg font-bold mb-2">
+                Memberi kembali kepada komunitas lokal
+              </h3>
+              <p class="text-sm text-gray-700 mb-4 leading-relaxed">
+                Ini adalah bagian dari tanggung jawab kami untuk berkontribusi
+                kepada komunitas yang sudah menjadi rumah bagi kami.
+              </p>
+              <a href="#" class="text-sm font-semibold hover:underline">
+                Informasi lebih lanjut →
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- BERGABUNGLAH DENGAN KAMI -->
+    <section class="py-10 md:py-14">
+      <div class="max-w-6xl mx-auto px-4 lg:px-6">
+        <div class="relative flex flex-col md:flex-row items-center md:items-stretch">
+          <!-- card putih kiri -->
+          <div
+            class="bg-white rounded-[28px] shadow-sm px-8 py-10 md:px-10 md:py-12 md:w-[55%] z-10">
+            <h2 class="text-2xl md:text-3xl font-extrabold mb-4">
+              Bergabunglah dengan kami
+            </h2>
+            <p class="text-sm md:text-base text-gray-700 mb-8 leading-relaxed">
+              Jelajahi budaya inklusivitas dan pemberdayaan, yang bertujuan
+              untuk memelihara kreativitas dan membawa diri dan hasrat kita
+              sepenuhnya setiap hari.
+            </p>
+            <a href="#"
+               class="inline-flex items-center justify-center px-8 py-2 rounded-full border border-black text-sm font-semibold hover:bg-black hover:text-white transition">
+              Informasi lebih lanjut
+            </a>
+          </div>
+
+          <!-- gambar kanan -->
+          <div
+            class="md:absolute md:right-0 md:top-1/2 md:-translate-y-1/2 md:w-[60%] w-full mt-6 md:mt-0 rounded-[28px] overflow-hidden shadow-sm">
+            <img src="images/Gambar3.webp" alt="Hands"
+                 class="w-full h-[260px] md:h-[340px] object-cover">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-12 bg-[#ECECEC]">
+  <div class="max-w-4xl mx-auto px-4 text-center">
+
+    <h2 class="text-3xl font-extrabold mb-10">
+      Jelajahi Merek Kami
+    </h2>
+
+    <div class="grid grid-cols-3 gap-6 place-items-center">
+
+      <!-- CARD TEMPLATE -->
+      <div class="bg-white w-[230px] h-[230px] rounded-[20px] 
+                  shadow-[0_6px_20px_rgba(0,0,0,0.12)]
+                  flex items-center justify-center">
+        <img src="images/cocacola.svg" class="w-28" />
+      </div>
+
+      <div class="bg-white w-[230px] h-[230px] rounded-[20px] 
+                  shadow-[0_6px_20px_rgba(0,0,0,0.12)]
+                  flex items-center justify-center">
+        <img src="images/fanta.svg" class="w-28" />
+      </div>
+
+      <div class="bg-white w-[230px] h-[230px] rounded-[20px] 
+                  shadow-[0_6px_20px_rgba(0,0,0,0.12)]
+                  flex items-center justify-center">
+        <img src="images/sprite.svg" class="w-28" />
+      </div>
+
+      <div class="bg-white w-[230px] h-[230px] rounded-[20px] 
+                  shadow-[0_6px_20px_rgba(0,0,0,0.12)]
+                  flex items-center justify-center">
+        <img src="images/schweppes.svg" class="w-28" />
+      </div>
+
+      <div class="bg-white w-[230px] h-[230px] rounded-[20px] 
+                  shadow-[0_6px_20px_rgba(0,0,0,0.12)]
+                  flex items-center justify-center">
+        <img src="images/minutemaid.svg" class="w-28" />
+      </div>
+
+      <div class="bg-white w-[230px] h-[230px] rounded-[20px] 
+                  shadow-[0_6px_20px_rgba(0,0,0,0.12)]
+                  flex items-center justify-center">
+        <img src="images/frestea.svg" class="w-28" />
+      </div>
+
+    </div>
+
+    <button
+      class="mt-10 px-12 py-3 border-2 border-black rounded-full 
+             font-semibold text-[15px] tracking-wide
+             hover:bg-black hover:text-white transition">
+      Lihat semua
+    </button>
+
+  </div>
+</section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-black text-gray-200 pt-10 pb-6 mt-10">
+    <div class="max-w-6xl mx-auto px-4 lg:px-6">
+      <!-- top -->
+      <div class="flex flex-col md:flex-row items-start md:items-center justify-between mb-6">
+        <div class="flex items-center">
+          <img src="images/logo.svg" alt="The Coca-Cola Company" class="h-7">
+        </div>
+        <button
+          class="mt-4 md:mt-0 inline-flex items-center gap-2 px-5 py-2 rounded-full border border-gray-400 text-sm hover:bg-white hover:text-black transition">
+          <!-- ikon lokasi sederhana -->
+          <span class="inline-block w-4 h-4 rounded-full border border-gray-400"></span>
+          <span>Indonesia</span>
+        </button>
+      </div>
+
+      <div class="border-t border-gray-700 my-6"></div>
+
+      <!-- middle columns + social -->
+      <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-10">
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 text-sm">
+          <div>
+            <h3 class="text-xs tracking-[0.15em] text-gray-400 font-semibold mb-3">
+              TENTANG KAMI
+            </h3>
+            <ul class="space-y-2">
+              <li><a href="#" class="hover:underline">Perusahaan Kami</a></li>
+              <li><a href="#" class="hover:underline">Pusat Media</a></li>
+              <li><a href="#" class="hover:underline">Sejarah</a></li>
+              <li><a href="#" class="hover:underline">Karir</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-xs tracking-[0.15em] text-gray-400 font-semibold mb-3">
+              PERLU BANTUAN?
+            </h3>
+            <ul class="space-y-2">
+              <li><a href="#" class="hover:underline">FAQ</a></li>
+              <li><a href="#" class="hover:underline">Sitemap</a></li>
+              <li><a href="contact_us.html" class="hover:underline">Contact Us</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-xs tracking-[0.15em] text-gray-400 font-semibold mb-3">
+              LEGAL
+            </h3>
+            <ul class="space-y-2">
+              <li><a href="#" class="hover:underline">Kebijakan privasi</a></li>
+              <li><a href="#" class="hover:underline">Ketentuan Penggunaan</a></li>
+              <li><a href="#" class="hover:underline">Kebijakan Cookie</a></li>
+              <li><a href="#" class="hover:underline">Kebijakan Pemasaran yang Bertanggung Jawab</a></li>
+              <li><a href="#" class="hover:underline">Syarat &amp; Ketentuan</a></li>
+              <li><a href="#" class="hover:underline">Pengaturan Cookie</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- social icons -->
+        <div class="flex items-start space-x-3">
+          <a href="#" class="w-9 h-9 rounded-full border border-gray-300 flex items-center justify-center hover:bg-white hover:text-black transition">
+            X
+          </a>
+          <a href="#" class="w-9 h-9 rounded-full border border-gray-300 flex items-center justify-center hover:bg-white hover:text-black transition">
+            ⧖
+          </a>
+          <a href="#" class="w-9 h-9 rounded-full border border-gray-300 flex items-center justify-center hover:bg-white hover:text-black transition">
+            ▶
+          </a>
+          <a href="#" class="w-9 h-9 rounded-full border border-gray-300 flex items-center justify-center hover:bg-white hover:text-black transition">
+            f
+          </a>
+        </div>
+      </div>
+
+      <div class="border-t border-gray-700 mt-6 pt-4 text-xs text-gray-400 text-right">
+        © 2025 The Coca-Cola Company. All rights reserved.
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
